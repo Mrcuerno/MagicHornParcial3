@@ -1,0 +1,2 @@
+C:\Users\Mr_cu\OneDrive\Documentos\GitHub\MagicHornParcial3\TallerPIII\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\Users\Mr_cu\OneDrive\Documentos\GitHub\MagicHornParcial3\TallerPIII\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
