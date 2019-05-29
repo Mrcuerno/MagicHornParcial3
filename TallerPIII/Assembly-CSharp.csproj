@@ -60,6 +60,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\_Project\Scripts\CharacterController2D.cs" />
+    <Compile Include="Assets\_Project\Scripts\ControladorMenu.cs" />
+    <Compile Include="Assets\_Project\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\_Project\Scripts\startToLeave.cs" />
     <Compile Include="Assets\_Project\Scripts\startToPlay.cs" />
     <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
