@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 548}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 548}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -111,10 +111,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 681, y: 498}
+  m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 10444
+  controlID: 49
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,10 +136,10 @@ MonoBehaviour:
     y: 0
     width: 1490
     height: 947
-  m_MinSize: {x: 404, y: 498}
+  m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 10388
+  controlID: 83
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -161,10 +161,10 @@ MonoBehaviour:
     y: 0
     width: 1490
     height: 503
-  m_MinSize: {x: 404, y: 224}
-  m_MaxSize: {x: 8004, y: 4024}
+  m_MinSize: {x: 406, y: 224}
+  m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 10389
+  controlID: 63
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -184,8 +184,8 @@ MonoBehaviour:
     y: 0
     width: 565
     height: 503
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 224}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -382,23 +382,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 0c140000
+      m_SelectedIDs: 02480000
       m_LastClickedID: 0
-      m_ExpandedIDs: ea7dfffff47dffff8e8fffff1090ffff2e91ffff7891ffff9e91ffffbc91ffffcc95ffffb8e3ffff9ceaffff9eeaffff02ebffff30ebffff5aebffffa6ebffff0aecffff14ecffff1aefffff2cefffff38efffff4aefffff56efffff7cefffff8aefffffa6efffffacefffff28f0ffff30f0ffff3ef0ffff8ef0ffffa0f0ffffacf0ffffbaf0ffffc6f0ffffd2f0ffff24f1ffff4af1ffff8ef1ffff6ef8ffff10faffff1afbffffd4fbffff76400000aa410000fe420000cc480000e0480000f248000030490000ec4c0000fe4c0000284d000036b700004ab700005cb7000090b7000098b70000fab700007cba000090ba0000a2ba0000d6ba0000deba000042bb0000
+      m_ExpandedIDs: cab8ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Canvas
-        m_OriginalName: Canvas
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 19752
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -621,14 +621,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/_Project/Scenes
   m_LastFoldersGridSize: 69
-  m_LastProjectPath: C:\Users\Mr_cu\OneDrive\Documentos\GitHub\MagicHornParcial3\TallerPIII
+  m_LastProjectPath: C:\Users\Alumno\Documents\GitHub\MagicHornParcial3\TallerPIII
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 34190000
-    m_LastClickedID: 6452
-    m_ExpandedIDs: 00000000640900004c0a0000000c0000cc0e0000e81000005c110000a2140000b2140000b21500001417000076180000a8180000de180000e8190000521b0000fc380000fe380000c23b00006e3d0000863d000000ca9a3bffffff7f
+    m_SelectedIDs: 50570000
+    m_LastClickedID: 22352
+    m_ExpandedIDs: 00000000d853000004540000545400007a540000e854000022550000905500009e550000485600006256000066560000a0560000e2560000225700002e5700003a57000082570000da570000485800004a58000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -656,7 +656,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000640900004c0a0000000c0000cc0e0000e81000005c110000a2140000b2140000b21500001417000076180000a8180000de180000e8190000521b0000fc380000fe380000c23b00006e3d000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000d853000004540000545400007a540000e854000022550000905500009e550000485600006256000066560000a0560000e2560000225700002e5700003a57000082570000da570000485800004a580000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -683,7 +683,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300007e320000500b0000ec0900001a2c0000be2d0000aa2d0000a87000002a51000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
