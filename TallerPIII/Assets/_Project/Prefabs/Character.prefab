@@ -135,6 +135,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 4898722955896213905}
   m_CeilingCheck: {fileID: 4898722955705564713}
   m_CrouchDisableCollider: {fileID: 4898722954704999686}
+  m_Grounded: 0
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -200,7 +201,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 4898722954704999685}
+  rigi: {fileID: 4898722954704999689}
   runSpeed: 40
+  jumpa: 200
 --- !u!1 &4898722954908517417
 GameObject:
   m_ObjectHideFlags: 0

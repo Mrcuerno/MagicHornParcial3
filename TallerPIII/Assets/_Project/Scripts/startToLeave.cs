@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,15 +9,17 @@ public class startToLeave : MonoBehaviour
 {
     private IEnumerator coroutine;
     private bool sfx;
-    public GameObject Cajita;
+    public TMP_Text caca;
+    public GameObject pepe;
 
 
    
     private void Start()
     {
-        Cajita.SetActive(false);
+        caca.enabled = false;
+        pepe.SetActive(false);
 
-   
+
         StartCoroutine(Hablar(3.0f));
         
 
@@ -49,7 +52,8 @@ public class startToLeave : MonoBehaviour
     {
         
         yield return new WaitForSeconds(tiempo);
-        Cajita.SetActive(true);
+        caca.enabled = true;
+        pepe.SetActive(true);
 
     }
 
