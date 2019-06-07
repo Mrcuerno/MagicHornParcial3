@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public CharacterController2D controller;
+    public Animator anim;
     public Rigidbody2D rigi;
     public float runSpeed = 40f;
     float horizontalMove = 0f;
@@ -14,6 +15,10 @@ public class PlayerMovement : MonoBehaviour
     public int jumpa = 100;
     bool crouch = false;
     bool tocarpared = false;
+    public Image panel;
+    public Image centarse;
+    public float timebtwattack;
+    public float startimebtwattack;
 
 
 
@@ -30,16 +35,27 @@ public class PlayerMovement : MonoBehaviour
             rigi.constraints = RigidbodyConstraints2D.FreezeRotation;
             rigi.gravityScale = 3;
             StopAllCoroutines();
-            controller.Jumpu(jumpa); 
+            controller.Jumpu(jumpa);
+            
         }
         if (Input.GetButtonDown("Crouch")   /*||Input.GetAxis("Vertical") < 0*/)
         {
             crouch = true;
+            centarse.gameObject.SetActive(true);
+
         }
         else if (Input.GetButtonUp("Crouch"))
         {
             crouch = false;
+            centarse.gameObject.SetActive(false);
         }
+
+
+        
+
+            
+      
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -82,5 +98,19 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         rigi.constraints = RigidbodyConstraints2D.FreezeRotation;
         rigi.gravityScale = 3;
+        panel.gameObject.SetActive(true);
+        anim.Play("Timer2");
+        StartCoroutine(timer());
+        //panel.enabled = false;
+
+
+    }
+    public IEnumerator timer()
+    {
+        yield return new WaitForSeconds(0.45f);
+
+        panel.gameObject.SetActive(false);
+
+
     }
 }
