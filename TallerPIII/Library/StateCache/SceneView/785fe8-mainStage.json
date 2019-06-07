@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":false,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":0.36962103843688967,"y":0.27657291293144228,"z":-0.005468538962304592},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":22.61844825744629,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":false,"audioPlay":false,"sceneViewState":{"showFog":true,"showMaterialUpdate":false,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true},"in2DMode":true,"pivot":{"x":1.8574082851409913,"y":1.4361958503723145,"z":0.498046875},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":15.604159355163575,"orthographic":true}
+>>>>>>> Villa

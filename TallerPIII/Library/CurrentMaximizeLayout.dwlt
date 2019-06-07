@@ -21,10 +21,17 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
+<<<<<<< HEAD
   m_MinSize: {x: 709, y: 498}
   m_MaxSize: {x: 18004, y: 14048}
   vertical: 0
   controlID: 3772
+=======
+  m_MinSize: {x: 713, y: 498}
+  m_MaxSize: {x: 18008, y: 14048}
+  vertical: 0
+  controlID: 154
+>>>>>>> Villa
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -46,10 +53,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 939
     y: 627
     width: 547
     height: 373
+=======
+    x: 878
+    y: 712
+    width: 608
+    height: 288
+>>>>>>> Villa
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 1
   m_Gizmos: 0
@@ -61,10 +75,17 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -273.5
     m_HBaseRangeMax: 273.5
     m_VBaseRangeMin: -178
     m_VBaseRangeMax: 178
+=======
+    m_HBaseRangeMin: -304
+    m_HBaseRangeMax: 304
+    m_VBaseRangeMin: -135.5
+    m_VBaseRangeMax: 135.5
+>>>>>>> Villa
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -82,25 +103,43 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
+<<<<<<< HEAD
       width: 547
       height: 356
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 273.5, y: 178}
+=======
+      width: 608
+      height: 271
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 304, y: 135.5}
+>>>>>>> Villa
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -273.5
       y: -178
       width: 547
       height: 356
+=======
+      x: -304
+      y: -135.5
+      width: 608
+      height: 271
+>>>>>>> Villa
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
+<<<<<<< HEAD
   m_LastWindowPixelSize: {x: 547, y: 373}
+=======
+  m_LastWindowPixelSize: {x: 608, y: 288}
+>>>>>>> Villa
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -126,10 +165,17 @@ MonoBehaviour:
     y: 0
     width: 1490
     height: 947
+<<<<<<< HEAD
   m_MinSize: {x: 432, y: 498}
   m_MaxSize: {x: 14002, y: 14048}
   vertical: 1
   controlID: 3773
+=======
+  m_MinSize: {x: 436, y: 498}
+  m_MaxSize: {x: 14006, y: 14048}
+  vertical: 1
+  controlID: 155
+>>>>>>> Villa
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -150,11 +196,19 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1490
+<<<<<<< HEAD
     height: 554
   m_MinSize: {x: 404, y: 224}
   m_MaxSize: {x: 8004, y: 4024}
   vertical: 0
   controlID: 3774
+=======
+    height: 639
+  m_MinSize: {x: 406, y: 224}
+  m_MaxSize: {x: 8006, y: 4024}
+  vertical: 0
+  controlID: 156
+>>>>>>> Villa
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -172,8 +226,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 508
     height: 554
+=======
+    width: 300
+    height: 639
+>>>>>>> Villa
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 6}
@@ -204,15 +263,24 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
+<<<<<<< HEAD
     width: 506
     height: 534
+=======
+    width: 298
+    height: 619
+>>>>>>> Villa
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
+<<<<<<< HEAD
       m_ExpandedIDs: ecdafffff6dafffff8daffffe6590000365a0000425a0000
+=======
+      m_ExpandedIDs: d4fbffff9a1f0000
+>>>>>>> Villa
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -251,12 +319,21 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 508
     y: 0
     width: 982
     height: 554
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+    x: 300
+    y: 0
+    width: 1190
+    height: 639
+  m_MinSize: {x: 204, y: 224}
+  m_MaxSize: {x: 4004, y: 4024}
+>>>>>>> Villa
   m_ActualView: {fileID: 10}
   m_Panes:
   - {fileID: 8}
@@ -285,23 +362,30 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 565
     y: 73
     width: 921
     height: 534
+=======
+    x: 300
+    y: 73
+    width: 1186
+    height: 619
+>>>>>>> Villa
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
     m_KeySerializationHelper:
-    - {fileID: 1107151577309062842, guid: bbdb17abc7aeea145afb1c2a33046d88, type: 2}
+    - {fileID: 1107680234510028496, guid: c6abc3a9c8cabda4f923bcba9797ef99, type: 2}
     m_ValueSerializationHelper:
-    - e00: 1
+    - e00: 0.95550627
       e01: 0
       e02: 0
-      e03: 0
+      e03: 3.3468323
       e10: 0
-      e11: 1
+      e11: 0.95550627
       e12: 0
-      e13: 0
+      e13: 157.87479
       e20: 0
       e21: 0
       e22: 1
@@ -311,10 +395,10 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: bbdb17abc7aeea145afb1c2a33046d88,
+  m_AnimatorController: {fileID: 9100000, guid: c6abc3a9c8cabda4f923bcba9797ef99,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 1107151577309062842, guid: bbdb17abc7aeea145afb1c2a33046d88,
+  - m_Target: {fileID: 1107680234510028496, guid: c6abc3a9c8cabda4f923bcba9797ef99,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -374,10 +458,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 508
     y: 73
     width: 978
     height: 534
+=======
+    x: 300
+    y: 73
+    width: 1186
+    height: 619
+>>>>>>> Villa
   m_PersistentViewDataDictionary: {fileID: 0}
   m_WindowGUID: 785fe8c62796efa45976a1c5c0968844
   m_SceneLighting: 0
@@ -385,9 +476,15 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: -1.2394811, y: 9.931408, z: -10.0390625}
     speed: 2
     m_Value: {x: -1.2394811, y: 9.931408, z: -10.0390625}
+=======
+    m_Target: {x: 11.13843, y: 7.3230534, z: 0.375}
+    speed: 2
+    m_Value: {x: 11.13843, y: 7.3230534, z: 0.375}
+>>>>>>> Villa
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -419,9 +516,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 26.235409
     speed: 2
     m_Value: 26.235409
+=======
+    m_Target: 27.841154
+    speed: 2
+    m_Value: 27.841154
+>>>>>>> Villa
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -451,6 +554,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 554
     width: 1490
     height: 393
@@ -458,6 +562,15 @@ MonoBehaviour:
   m_MaxSize: {x: 14002, y: 10024}
   vertical: 0
   controlID: 3697
+=======
+    y: 639
+    width: 1490
+    height: 308
+  m_MinSize: {x: 436, y: 274}
+  m_MaxSize: {x: 14006, y: 10024}
+  vertical: 0
+  controlID: 135
+>>>>>>> Villa
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -475,8 +588,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 939
     height: 393
+=======
+    width: 878
+    height: 308
+>>>>>>> Villa
   m_MinSize: {x: 232, y: 274}
   m_MaxSize: {x: 10002, y: 10024}
   m_ActualView: {fileID: 13}
@@ -507,9 +625,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 627
     width: 937
     height: 373
+=======
+    y: 712
+    width: 876
+    height: 288
+>>>>>>> Villa
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -523,20 +647,34 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/_Project/Scripts
   m_ViewMode: 1
   m_StartGridSize: 69
   m_LastFolders:
   - Assets/_Project/Scripts
+=======
+    - Assets/_Project/Scripts/Enemigo
+  m_ViewMode: 1
+  m_StartGridSize: 69
+  m_LastFolders:
+  - Assets/_Project/Scripts/Enemigo
+>>>>>>> Villa
   m_LastFoldersGridSize: 69
   m_LastProjectPath: C:\Users\Alumno\Documents\GitHub\MagicHornParcial3\TallerPIII
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
+<<<<<<< HEAD
     m_SelectedIDs: 96520000
     m_LastClickedID: 21142
     m_ExpandedIDs: 00000000184600001447000062480000ca480000ec480000dc4a0000ea4b00000c4e0000844e0000d2510000145200002452000032530000a65400000e5600004a56000086560000a25700002c590000505b0000525b000000ca9a3b
+=======
+    m_SelectedIDs: 1e0e0000
+    m_LastClickedID: 3614
+    m_ExpandedIDs: 000000007e0b0000700c0000b20d00003e0e00002e1000003e1100006c130000e2130000201700006417000074170000ea17000084180000f6190000361a0000181b0000641b00009a1b0000d21b0000f21c0000761e0000e83c0000ea3c000000ca9a3b
+>>>>>>> Villa
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -552,7 +690,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 12}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -564,7 +702,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000184600001447000062480000ca480000ec480000dc4a0000ea4b00000c4e0000844e0000d2510000145200002452000032530000a65400000e5600004a56000086560000a25700002c590000505b0000525b000000ca9a3b
+=======
+    m_ExpandedIDs: 000000007e0b0000700c0000b20d00003e0e00002e1000003e1100006c130000e2130000201700006417000074170000ea17000084180000f6190000361a0000181b0000641b00009a1b0000d21b0000f21c0000761e0000e83c0000ea3c0000
+>>>>>>> Villa
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -589,10 +731,17 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
+<<<<<<< HEAD
     m_SelectedInstanceIDs: ecdaffff
     m_LastClickedInstanceID: -9492
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300007e320000500b0000ec0900001a2c0000be2d0000aa2d0000a87000002a51000000000000
+=======
+    m_SelectedInstanceIDs: 3cf9ffff
+    m_LastClickedInstanceID: -1732
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c62300007e320000500b0000ec0900001a2c0000be2d0000aa2d0000a87000002a51000000000000bc190000
+>>>>>>> Villa
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -641,9 +790,15 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 627
     width: 957
     height: 373
+=======
+    y: 712
+    width: 876
+    height: 288
+>>>>>>> Villa
   m_PersistentViewDataDictionary: {fileID: 0}
 --- !u!114 &15
 MonoBehaviour:
@@ -660,12 +815,21 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 939
     y: 0
     width: 551
     height: 393
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+    x: 878
+    y: 0
+    width: 612
+    height: 308
+  m_MinSize: {x: 204, y: 224}
+  m_MaxSize: {x: 4004, y: 4024}
+>>>>>>> Villa
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -690,8 +854,13 @@ MonoBehaviour:
     y: 0
     width: 430
     height: 947
+<<<<<<< HEAD
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
+=======
+  m_MinSize: {x: 277, y: 74}
+  m_MaxSize: {x: 4002, y: 4024}
+>>>>>>> Villa
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}

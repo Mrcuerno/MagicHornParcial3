@@ -1,4 +1,5 @@
 sceneSetups:
 - path: Assets/_Project/Scenes/Tutorial.unity
+- path: Assets/_Project/Scenes/PruebasVilla.unity
   isLoaded: 1
   isActive: 1
