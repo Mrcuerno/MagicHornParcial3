@@ -6,7 +6,7 @@ public class SCR_enemigo : MonoBehaviour
 {
     private int vida = 4;
     private Animator animator;
-    public enum Estado { Idle, Caminando, Corriendo, Atacando }
+    public enum Estado {Caminando, Corriendo, Atacando }
     public Estado miEstado;
     private string caminandoText = "Walking", atacandoText = "Attacking", runningText = "Running";
     public int tipo;
@@ -17,7 +17,7 @@ public class SCR_enemigo : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        miEstado = Estado.Idle;
+        miEstado = Estado.Caminando;
         jugador = GameObject.FindWithTag("Player");
         layerMaskMapa = LayerMask.GetMask("Default");
         layerMaskPlayer = LayerMask.GetMask("Player");
@@ -38,97 +38,120 @@ public class SCR_enemigo : MonoBehaviour
         {
             grounded = false;
         }
-        Vector2 direccion = jugador.transform.position - transform.position;
 
-        RaycastHit2D rayo = Physics2D.Raycast(ojos.transform.position, direccion.normalized, Mathf.Infinity, layerMaskPlayer);
+        RaycastHit2D rayo = Physics2D.Raycast(ojos.transform.position, transform.right * -1, 10f);
         if (rayo.collider && rayo.collider.transform.root.tag == "Player")
         {
-            float distancia = Mathf.Sqrt((rayo.collider.transform.position.y - transform.position.y) * (rayo.collider.transform.position.y - transform.position.y) + (rayo.collider.transform.position.x - transform.position.x) * (rayo.collider.transform.position.x - transform.position.x));
-            //Debug.Log("Distancia: " + distancia);
-            if (distancia <= 10f && (miEstado == Estado.Idle || miEstado == Estado.Caminando))
-            {   
-                if ((transform.position.x - rayo.collider.transform.position.x) > 0)
-                {
-                    
-                    if (transform.rotation.y == 1)
-                    {
-                        dirActual = false;
-                        Debug.Log("girar a izquierda");
-                        transform.Rotate(0, 180, 0, Space.Self);
-                    }
-                }
-                else
-                {
-                    
-                    if (transform.rotation.y == 0)
-                    {
-                        dirActual = true;
-                        Debug.Log("girar a derecha");
-                        transform.Rotate(0, 180, 0, Space.Self);
-                    }
-                }
-                miEstado = Estado.Corriendo;
-                animator.SetBool(runningText, true);
-            }
-            else if(miEstado==Estado.Idle)
+            float distancia = Mathf.Sqrt((rayo.collider.transform.position.x - transform.position.x) * (rayo.collider.transform.position.x - transform.position.x));
+            Debug.Log("Distancia: " + distancia);
+            if (distancia <= 10f)
             {
-                miEstado = Estado.Caminando;
+                switch (miEstado) {
+                    case Estado.Caminando:
+                            Debug.DrawRay(ojos.transform.position, transform.right * -10f, Color.blue);
+                            setCorrer();
+                            break;
+                    case Estado.Atacando:
+                        switch (tipo)
+                        {
+                            case 0:
+                                if (distancia > 2f)
+                                {
+                                    Debug.DrawRay(ojos.transform.position, transform.right * -10f, Color.red);
+                                    setCorrer();
+                                }
+                                break;
+                            case 1:
+                                if (distancia > 6f)
+                                {
+                                    Debug.DrawRay(ojos.transform.position, transform.right * -10f, Color.red);
+                                    setCorrer();
+                                }
+                                break;
+                        }
+                        break;
+                    case Estado.Corriendo:
+                        switch (tipo)
+                        {
+                            case 0:
+                                if (distancia <= 2f && miEstado != Estado.Atacando)
+                                {
+                                    Debug.DrawRay(ojos.transform.position, transform.right * -10f, Color.red);
+                                    setAtacar();
+                                }
+                                break;
+                            case 1:
+                                if (distancia <= 6f && miEstado != Estado.Atacando)
+                                {
+                                    Debug.DrawRay(ojos.transform.position, transform.right * -10f, Color.red);
+                                    setAtacar();
+                                }
+                                break;
+                        }
+                        break;
+                }
             }
         }
-        else
+        else if(rayo.collider)
         {
-            Debug.DrawRay(ojos.transform.position, direccion.normalized, Color.black);
+            if (rayo.collider.transform.position.x - transform.position.x < 1.5 && rayo.collider.transform.position.x - transform.position.x > -1.5)
+            {
+                dirActual = !dirActual;
+                transform.Rotate(0, 180, 0, Space.Self);
+            }
+            Debug.DrawRay(ojos.transform.position, transform.right * -10f, Color.black);
             miEstado = Estado.Caminando;
         }
-        switch (tipo)
+        switch (miEstado)
         {
-            case 0:
-
-                break;
-            case 1:
-                break;
-        }
-        if (miEstado == Estado.Caminando)
-        {
-            RaycastHit2D rayo2 = Physics2D.Raycast(ojos.transform.position, Vector2.left, 15f, layerMaskPlayer);
-            if (rayo2.collider)
-            {
-                Debug.DrawRay(ojos.transform.position, rayo2.collider.transform.position - transform.position, Color.yellow);
-                //Debug.Log(rayo2.collider.transform.position);
-                //Debug.Log(rayo2.collider.transform.position.x - transform.position.x);
-                if (rayo2.collider.transform.position.x - transform.position.x < 1.5 && rayo2.collider.transform.position.x - transform.position.x > -1.5)
+            case Estado.Caminando:
+                if (grounded)
+                {
+                    transform.Translate(Vector2.left * Time.deltaTime, Space.Self);
+                }
+                else
                 {
                     dirActual = !dirActual;
                     transform.Rotate(0, 180, 0, Space.Self);
                 }
-            }
-            else
-            {
-                Debug.DrawRay(ojos.transform.position, Vector2.left * 15f, Color.red);
-            }
-            if (grounded)
-            {
-                transform.Translate(Vector2.left * Time.deltaTime, Space.Self);
-            }
-            else
-            {
-                dirActual = !dirActual;
-                transform.Rotate(0, 180, 0, Space.Self);
-            }
+                break;
+            case Estado.Corriendo:
+                if (grounded)
+                {
+                    transform.Translate(Vector2.left * 2f * Time.deltaTime, Space.Self);
+                }
+                else
+                {
+                    dirActual = !dirActual;
+                    transform.Rotate(0, 180, 0, Space.Self);
+                    miEstado = Estado.Caminando;
+                }
+                break;
+            case Estado.Atacando:
+                
+                break;
         }
-        if (miEstado == Estado.Corriendo)
-        {
-            if (grounded)
-            {
-                transform.Translate(Vector2.left * 2f * Time.deltaTime, Space.Self);
-            }
-            else
-            {
-                dirActual = !dirActual;
-                transform.Rotate(0, 180, 0, Space.Self);
-                miEstado = Estado.Caminando;
-            }
-        }
+    }
+    private void setCorrer()
+    {
+        miEstado = Estado.Corriendo;
+        animator.SetBool(runningText, true);
+        animator.SetBool(caminandoText, false);
+        animator.SetBool(atacandoText, false);
+    }
+    private void setCaminar()
+    {
+        miEstado = Estado.Caminando;
+        animator.SetBool(runningText, false);
+        animator.SetBool(caminandoText, true);
+        animator.SetBool(atacandoText, false);
+    }
+    private void setAtacar()
+    {
+        miEstado = Estado.Atacando;
+        animator.SetBool(runningText, false);
+        animator.SetBool(caminandoText, false);
+        animator.SetBool(atacandoText, true);
     }
     public void HacerDanio()
     {
@@ -142,10 +165,5 @@ public class SCR_enemigo : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
-    }
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawRay(ojos.transform.position, Vector2.left*15f);
     }
 }
