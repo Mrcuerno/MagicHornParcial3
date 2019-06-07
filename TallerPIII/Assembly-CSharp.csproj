@@ -65,8 +65,8 @@
     <Compile Include="Assets\_Project\Scripts\CharacterController2D.cs" />
     <Compile Include="Assets\_Project\Scripts\ControladorMenu.cs" />
     <Compile Include="Assets\_Project\Scripts\Dummy.cs" />
-    <Compile Include="Assets\_Project\Scripts\PlayerAttack.cs" />
     <Compile Include="Assets\_Project\Scripts\Enemigo\SCR_enemigo.cs" />
+    <Compile Include="Assets\_Project\Scripts\PlayerAttack.cs" />
     <Compile Include="Assets\_Project\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\_Project\Scripts\startToLeave.cs" />
     <Compile Include="Assets\_Project\Scripts\startToPlay.cs" />
