@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 
 public class startToLeave : MonoBehaviour
 {
@@ -45,7 +45,9 @@ public class startToLeave : MonoBehaviour
 
     void LoadScene()
     {
-        Application.LoadLevel("Nivel1");
+        PlayerPrefs.SetInt("NivelMax", 3);
+        PlayerPrefs.Save();
+        SceneManager.LoadScene("Nivel1");
     }
 
     private IEnumerator Hablar(float tiempo)
