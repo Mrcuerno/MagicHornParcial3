@@ -31,7 +31,7 @@ public class SCR_enemigo : MonoBehaviour
         {
             // if(hitColliders[i].GetComponent<SCR_enemigo>())
             //hitColliders[i].transform.root.GetComponent<SCR_enemigo>()?.mover("Sonido", _centro, _prioridad);
-            Debug.Log("algo");
+            //Debug.Log("algo");
             grounded = true;
         }
         else
