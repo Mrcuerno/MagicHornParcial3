@@ -11,6 +11,11 @@ public class SCR_MenuManager : MonoBehaviour
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
+        if(PlayerPrefs.GetInt("NivelMax")==0)
+        {
+            PlayerPrefs.SetInt("NivelMax", 2);
+            PlayerPrefs.Save();
+        }
     }
 
     // Update is called once per frame
@@ -33,6 +38,17 @@ public class SCR_MenuManager : MonoBehaviour
                 }
                 break;
         }
+    }
+    public void victoria()
+    {
+        int escenaActual=SceneManager.GetActiveScene().buildIndex;
+        escenaActual++;
+        if (PlayerPrefs.GetInt("NivelMax") < escenaActual)
+        {
+            PlayerPrefs.SetInt("NivelMax", escenaActual);
+        }
+        PlayerPrefs.Save();
+        CambiarEsecena(escenaActual);
     }
     public void CambiarEsecena(int nivel)
     {

@@ -11,14 +11,19 @@ public class SCR_enemigo : MonoBehaviour
     private string caminandoText = "Walking", atacandoText = "Attacking", runningText = "Running";
     public int tipo;
     public GameObject piso, ojos, jugador;
+    public PlayerMovement movimientoJugador;
     public bool grounded, dirActual;
     LayerMask layerMaskMapa,layerMaskPlayer;
+
+    
     // Start is called before the first frame update
     void Start()
     {
+        
         animator = GetComponent<Animator>();
         miEstado = Estado.Caminando;
         jugador = GameObject.FindWithTag("Player");
+        movimientoJugador = jugador.transform.GetChild(0).gameObject.GetComponent<PlayerMovement>();
         layerMaskMapa = LayerMask.GetMask("Default");
         layerMaskPlayer = LayerMask.GetMask("Player");
     }
@@ -43,7 +48,7 @@ public class SCR_enemigo : MonoBehaviour
         if (rayo.collider && rayo.collider.transform.root.tag == "Player")
         {
             float distancia = Mathf.Sqrt((rayo.collider.transform.position.x - transform.position.x) * (rayo.collider.transform.position.x - transform.position.x));
-            Debug.Log("Distancia: " + distancia);
+            //Debug.Log("Distancia: " + distancia);
             if (distancia <= 10f)
             {
                 switch (miEstado) {
@@ -94,8 +99,11 @@ public class SCR_enemigo : MonoBehaviour
         }
         else if(rayo.collider)
         {
-            if (rayo.collider.transform.position.x - transform.position.x < 1.5 && rayo.collider.transform.position.x - transform.position.x > -1.5)
+            //Debug.Log("Nombre: " + rayo.point.x);
+            //Debug.Log("Equis: " + rayo.collider.transform.position.x);
+            if (rayo.point.x - transform.position.x < 1.1f && rayo.point.x - transform.position.x > -1.1f)
             {
+                
                 dirActual = !dirActual;
                 transform.Rotate(0, 180, 0, Space.Self);
             }
@@ -151,14 +159,14 @@ public class SCR_enemigo : MonoBehaviour
         miEstado = Estado.Atacando;
         animator.SetBool(runningText, false);
         animator.SetBool(caminandoText, false);
-        animator.SetBool(atacandoText, true);
+        animator.SetBool(atacandoText,true);
     }
-    public void HacerDanio()
+    public void hacerDanio()
     {
         Debug.Log("Daño daño!");
-        //jugador.GetComponent<PlayerMovement>().recibirDanio(1);
+        movimientoJugador.recibirDanio(1);
     }
-    public void RecibirDanio(int _danio)
+    public void recibirDanio(int _danio)
     {
         vida -= _danio;
         if (vida <= 0)

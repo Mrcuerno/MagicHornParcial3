@@ -19,9 +19,12 @@ public class PlayerMovement : MonoBehaviour
     public Image centarse;
     public float timebtwattack;
     public float startimebtwattack;
+    public int vida;
 
-
-
+    private void Start()
+    {
+        vida = 4;
+    }
 
     // Update is called once per frame
     void Update()
@@ -112,5 +115,25 @@ public class PlayerMovement : MonoBehaviour
         panel.gameObject.SetActive(false);
 
 
+    }
+    public void hacerDanio()
+    {
+        Debug.Log("Daño daño!");
+        //jugador.GetComponent<PlayerMovement>().recibirDanio(1);
+    }
+    public void recibirDanio(int _danio)
+    {
+        vida -= _danio;
+        if (vida <= 0)
+        {
+            gameObject.SetActive(false);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.name == "Victoria")
+        {
+            GameObject.Find("Canvas").GetComponent<SCR_MenuManager>().victoria();
+        }
     }
 }
