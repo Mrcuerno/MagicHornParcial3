@@ -8,7 +8,7 @@ public class SCR_enemigo : MonoBehaviour
     private Animator animator;
     public enum Estado {Caminando, Corriendo, Atacando }
     public Estado miEstado;
-    private string caminandoText = "Walking", atacandoText = "Attacking", runningText = "Running";
+    private string caminandoText = "Walking", atacandoText = "Attacking", runningText = "Running", atacandoRangoText= "AttackingRango";
     public int tipo;
     public GameObject piso, ojos, jugador;
     public PlayerMovement movimientoJugador;
@@ -79,17 +79,17 @@ public class SCR_enemigo : MonoBehaviour
                         switch (tipo)
                         {
                             case 0:
-                                if (distancia <= 2f && miEstado != Estado.Atacando)
+                                if (distancia <= 2f)
                                 {
                                     Debug.DrawRay(ojos.transform.position, transform.right * -10f, Color.red);
                                     setAtacar();
                                 }
                                 break;
                             case 1:
-                                if (distancia <= 6f && miEstado != Estado.Atacando)
+                                if (distancia <= 6f)
                                 {
                                     Debug.DrawRay(ojos.transform.position, transform.right * -10f, Color.red);
-                                    setAtacar();
+                                    setAtacarRango();
                                 }
                                 break;
                         }
@@ -146,6 +146,7 @@ public class SCR_enemigo : MonoBehaviour
         animator.SetBool(runningText, true);
         animator.SetBool(caminandoText, false);
         animator.SetBool(atacandoText, false);
+        animator.SetBool(atacandoRangoText, false);
     }
     private void setCaminar()
     {
@@ -153,6 +154,7 @@ public class SCR_enemigo : MonoBehaviour
         animator.SetBool(runningText, false);
         animator.SetBool(caminandoText, true);
         animator.SetBool(atacandoText, false);
+        animator.SetBool(atacandoRangoText, false);
     }
     private void setAtacar()
     {
@@ -160,6 +162,15 @@ public class SCR_enemigo : MonoBehaviour
         animator.SetBool(runningText, false);
         animator.SetBool(caminandoText, false);
         animator.SetBool(atacandoText,true);
+        animator.SetBool(atacandoRangoText, false);
+    }
+    private void setAtacarRango()
+    {
+        miEstado = Estado.Atacando;
+        animator.SetBool(runningText, false);
+        animator.SetBool(caminandoText, false);
+        animator.SetBool(atacandoText, false);
+        animator.SetBool(atacandoRangoText, true);
     }
     public void hacerDanio()
     {

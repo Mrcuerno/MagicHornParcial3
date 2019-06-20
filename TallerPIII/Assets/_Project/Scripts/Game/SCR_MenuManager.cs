@@ -31,8 +31,8 @@ public class SCR_MenuManager : MonoBehaviour
         Menus[menu].SetActive(true);
         switch (menu)
         {
-            case 0:
-                for (int i=2;i < PlayerPrefs.GetInt("NivelMax");i++)
+            case 1:
+                for (int i=0;i < PlayerPrefs.GetInt("NivelMax")-2;i++)
                 {
                     nivelesBtn[i].SetActive(true);
                 }
@@ -52,8 +52,9 @@ public class SCR_MenuManager : MonoBehaviour
     }
     public void CambiarEsecena(int nivel)
     {
+        Debug.Log("Nivel max: " + PlayerPrefs.GetInt("NivelMax"));
         print("Cambiando a la escena " + nivel);
-        if(PlayerPrefs.GetInt("NivelMax")<= nivel)
+        if(PlayerPrefs.GetInt("NivelMax")>= nivel)
         {
             if (nivel == 1)
             {
