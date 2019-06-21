@@ -75,7 +75,7 @@ public class SCR_MenuManager : MonoBehaviour
                 Menus[2].SetActive(true);
                 Menus[3].SetActive(false);
                 Objetos[0].SetActive(false);
-                Objetos[1].SetActive(false);
+                //Objetos[1].SetActive(false);
             }
             SceneManager.LoadScene(nivel);
         }
