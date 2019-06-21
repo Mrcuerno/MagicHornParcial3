@@ -135,5 +135,9 @@ public class PlayerMovement : MonoBehaviour
         {
             GameObject.Find("Canvas").GetComponent<SCR_MenuManager>().victoria();
         }
+        else if(collision.name == "Caida")
+        {
+            GameObject.Find("Canvas").GetComponent<SCR_MenuManager>().CambiarEscena(1);
+        }
     }
 }

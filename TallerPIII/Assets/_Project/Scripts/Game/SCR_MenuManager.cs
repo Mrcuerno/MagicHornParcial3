@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class SCR_MenuManager : MonoBehaviour
 {
-    public GameObject[] Menus=new GameObject[3];// MainMenu, LevelMenu,GameMenu;
+    public GameObject[] Menus=new GameObject[4];// MainMenu, LevelMenu,GameMenu;
     public GameObject[] nivelesBtn= new GameObject[2];
+    public GameObject[] Objetos = new GameObject[2];
+    private bool isPaused;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,7 @@ public class SCR_MenuManager : MonoBehaviour
             PlayerPrefs.SetInt("NivelMax", 2);
             PlayerPrefs.Save();
         }
+        isPaused = false;
     }
 
     // Update is called once per frame
@@ -48,28 +51,53 @@ public class SCR_MenuManager : MonoBehaviour
             PlayerPrefs.SetInt("NivelMax", escenaActual);
         }
         PlayerPrefs.Save();
-        CambiarEsecena(escenaActual);
+        CambiarEscena(escenaActual);
     }
-    public void CambiarEsecena(int nivel)
+    public void CambiarEscena(int nivel)
     {
         Debug.Log("Nivel max: " + PlayerPrefs.GetInt("NivelMax"));
         print("Cambiando a la escena " + nivel);
-        if(PlayerPrefs.GetInt("NivelMax")>= nivel)
+        Time.timeScale = 1;
+        isPaused = false;
+        if (PlayerPrefs.GetInt("NivelMax")>= nivel)
         {
             if (nivel == 1)
             {
                 Menus[1].SetActive(false);
                 Menus[2].SetActive(false);
+                Menus[3].SetActive(false);
                 Menus[0].SetActive(true);
             }
             else
             {
                 Menus[0].SetActive(false);
-                Menus[1].SetActive(false);
+                Menus[1].SetActive(false);                
                 Menus[2].SetActive(true);
+                Menus[3].SetActive(false);
+                Objetos[0].SetActive(false);
+                Objetos[1].SetActive(false);
             }
             SceneManager.LoadScene(nivel);
         }
         
+    }
+    public void salir()
+    {
+        Application.Quit();
+    }
+    public void btnPause()
+    {
+        if (isPaused)
+        {
+            Menus[3].SetActive(false);
+            Time.timeScale = 1;
+            isPaused = false;
+        }
+        else
+        {
+            isPaused = true;
+            Menus[3].SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 }

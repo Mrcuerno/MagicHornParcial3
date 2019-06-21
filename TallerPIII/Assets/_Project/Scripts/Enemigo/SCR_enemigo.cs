@@ -99,6 +99,10 @@ public class SCR_enemigo : MonoBehaviour
         }
         else if(rayo.collider)
         {
+            if(miEstado== Estado.Atacando)
+            {
+                setCorrer();
+            }
             //Debug.Log("Nombre: " + rayo.point.x);
             //Debug.Log("Equis: " + rayo.collider.transform.position.x);
             if (rayo.point.x - transform.position.x < 1.1f && rayo.point.x - transform.position.x > -1.1f)
@@ -109,6 +113,10 @@ public class SCR_enemigo : MonoBehaviour
             }
             Debug.DrawRay(ojos.transform.position, transform.right * -10f, Color.black);
             miEstado = Estado.Caminando;
+        }
+        else
+        {
+            setCorrer();
         }
         switch (miEstado)
         {
