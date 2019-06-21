@@ -44,13 +44,13 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Crouch")   /*||Input.GetAxis("Vertical") < 0*/)
         {
             crouch = true;
-            centarse.gameObject.SetActive(true);
+            //centarse.gameObject.SetActive(true);
 
         }
         else if (Input.GetButtonUp("Crouch"))
         {
             crouch = false;
-            centarse.gameObject.SetActive(false);
+            //centarse.gameObject.SetActive(false);
         }
 
 
@@ -101,9 +101,9 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         rigi.constraints = RigidbodyConstraints2D.FreezeRotation;
         rigi.gravityScale = 3;
-        panel.gameObject.SetActive(true);
-        anim.Play("Timer2");
-        StartCoroutine(timer());
+        //panel.gameObject.SetActive(true);
+        //anim.Play("Timer2");
+        //StartCoroutine(timer());
         //panel.enabled = false;
 
 
@@ -127,7 +127,10 @@ public class PlayerMovement : MonoBehaviour
         if (vida <= 0)
         {
             gameObject.SetActive(false);
+            GameObject.Find("Canvas").GetComponent<SCR_MenuManager>().CambiarEscena(1);
         }
+
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

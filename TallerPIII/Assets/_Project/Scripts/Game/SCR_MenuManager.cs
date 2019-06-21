@@ -35,7 +35,7 @@ public class SCR_MenuManager : MonoBehaviour
         switch (menu)
         {
             case 1:
-                for (int i=0;i < PlayerPrefs.GetInt("NivelMax")-2;i++)
+                for (int i=0;i < PlayerPrefs.GetInt("NivelMax")-2 && i < 5;i++)
                 {
                     nivelesBtn[i].SetActive(true);
                 }
